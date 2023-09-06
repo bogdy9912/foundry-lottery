@@ -3,6 +3,6 @@ src = "src"
 out = "out"
 libs = ["lib"]
 
-remappings = ["@chainlink/contracts/=lib/chainlink/contracts", "@solmate=lib/solmate/src"]
+remappings = ["@chainlink/contracts/=lib/chainlink/contracts", "@solmate=lib/solmate/src", "foundry-devops/=lib/foundry-devops"]
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config

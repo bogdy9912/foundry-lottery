@@ -24,7 +24,7 @@ contract CreateSubscription is Script {
             ,
             ,
             ,
-uint256 deployerKey
+            uint256 deployerKey
         ) = helperConfig.activeNetworkConfig();
 
         return createSubscription(address(newVrfCoordinator), deployerKey);
@@ -32,7 +32,7 @@ uint256 deployerKey
 
     function createSubscription(
         address vrfCoordinator,
-         uint256 deployerKey
+        uint256 deployerKey
     ) public returns (uint64 subId) {
         console.log("Creating subscription on ChainId: ", block.chainid);
 
@@ -57,10 +57,15 @@ contract FundSubscription is Script {
             uint64 subscriptionId,
             ,
             address linkToken,
-    uint256 deployerKey
+            uint256 deployerKey
         ) = helperConfig.activeNetworkConfig();
 
-        fundSubscription(address(newVrfCoordinator), subscriptionId, linkToken,deployerKey);
+        fundSubscription(
+            address(newVrfCoordinator),
+            subscriptionId,
+            linkToken,
+            deployerKey
+        );
     }
 
     function fundSubscription(

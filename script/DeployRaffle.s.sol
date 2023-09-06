@@ -10,7 +10,6 @@ import {CreateSubscription, FundSubscription, AddConsumer} from "./Interaction.s
 
 contract DeployRaffle is Script {
     function run() external returns (Raffle raffle, HelperConfig helperConfig) {
-        console.log("CALLERRRRR:  ", msg.sender);
         console.log("Deploy Raffle Address is: ", address(this));
         // get the configuration for the network where the target contract is deployed
         helperConfig = new HelperConfig();
